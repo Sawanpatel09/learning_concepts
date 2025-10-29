@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <p1 id = "demo2"></p1>
+    <script>
+        let b
+        let a = 13
+        for (let i = 0; i < a;i ++){
+            if (i == 3) {
+                b = "this is my work";
+            } else {
+                b = "this is not my work";
+            }
+            document.getElementById("demo").innerHTML = b
+            document.getElementById("demo2").innerHTML = b
+            // console.log(i)
+        }
+
+    </script>
+</body>
+</html>

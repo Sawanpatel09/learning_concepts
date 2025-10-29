@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is validation form</h1>
+    <input type="text" id = "name"  placeholder="Enter your name">
+    <button onclick="validationform()">Submit</button>
+    <p id="msg"></p>
+    <script>
+        function validationform(){
+        let name = document.getElementById("name").value;
+        if (name === ""){
+            document.getElementById("msg").innerHTML = "name is required"
+        } else {
+            document.getElementById("msg") .innerHTML = "Succesufull"
+        }
+        }
+
+    </script>
+    
+</body>
+</html>
+
+<html>
+    <body>
+    <input type="text" id="name" placeholder="Enter your name">
+<button onclick="validateForm()">Submit</button>
+<p id="msg"></p>
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value;
+    if (name === "") {
+        document.getElementById("msg").innerHTML = "Name is required!";
+    } else {
+        document.getElementById("msg").innerHTML = "Submitted successfully!";
+    }
+}
+</script>
+</body>
+</html>

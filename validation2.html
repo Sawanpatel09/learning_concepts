@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        background: linear-gradient(to right,rgb(122, 122, 221),rgb(230, 225, 225));
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .card{
+        background-color: white;
+        border-radius: 35px;
+        height: 100vh;
+        width: 1200px;
+        margin-top: 40px;
+        padding-left: 100px;
+    }
+    .card h1{
+        
+        text-align: center;
+    }
+    .box{
+        display: contents;
+        justify-content: space-evenly
+    }
+.margin {
+   
+    margin : 20px;
+    padding:20px;
+    background-color: rgb(234, 235, 225);
+    border-radius: 20px;
+    width: 800px;
+    height: 400px;
+}
+.div-form{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+.div-form label{
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: black;
+}
+.div-form input{
+    padding: 10px 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 14px;
+
+}
+.div-form button{
+    padding: 10px 12px;
+    border: 2px solid black;
+    font-size: 14px;
+    background-color: rgb(59, 59, 223);
+    color: white;
+    padding-top: 15px;
+
+}
+.div2 {
+   margin : 20px;
+    padding:20px;
+    background-color: rgb(234, 235, 225);
+    border-radius: 20px;
+    width: 800px;
+    height: 300px;
+}
+.option{
+    margin: 20px;
+    padding: 20px;
+    background-color: blue;
+    border: 2px solid wheat;
+}
+</style>
+<body>
+    <div class="card">
+    <h1>this is validation form in javascript</h1>
+    <div class="box">
+    <div class="margin">
+        <div class="div-form">
+        <label for = "name">Enter your name</label><br>
+        <input type="text" id = "name" placeholder="Enter your name">
+        </div>
+        <div class="div-form">
+        <label for = "number">Enter your number</label><br>
+        <input type="text" id="number" placeholder="Enter your number">
+        </div>
+        <div class="div-form">
+        <label for = "email">Enter your email</label><br>
+        <input type="text" id="email" placeholder="enter your email">
+        </div>
+       
+        <p id = "msg"></p>
+          <div class="div-form">
+        <button onclick="validationForm1()">Submit</button>
+        </div>
+        <script>
+            function validationForm1(){
+                let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                let text = document.getElementById("name").value;
+                let number = document.getElementById("number").value;
+                let text1 = document.getElementById("email").value;
+                if (text === "") //|| number.length !== 10 ||  !pattern.test(text1)){
+                {
+                    alert("enter the name")
+                    //document.getElementById("msg").innerHTML = "enter the name";
+                }
+                else if (number.length !== 10){
+                    alert("enter the number")
+                    //document.getElementById("msg").innerHTML = "enter the right number";
+                }
+                else if (!pattern.test(text1)){
+                    alert("enter the right email")
+                    //document.getElementById("msg").innerHTML = "enter the right email";
+                }
+                else {
+                    document.getElementById("msg").innerHTML = "Form Submission is Succesfull...!"
+                }
+
+                }
+        </script>
+    </div>
+    <div class="div2" style="background-color: rgb(204, 163, 163);">
+        <div class="div-form">
+        <label for="roll_no">Enter your Roll no</label><br>
+        <input id = "roll_no" type="text"><br>
+        </div>
+        <div class="div-form">
+        <label for = "add"> Enter your address</label><br>
+        <input id = "add" type="Text"><br>
+        </div>
+        <p id = "msg1"></p>>
+        <div class="div-form">
+        <button onclick="validation1()">Submit</button>
+        </div>
+        <script>
+
+            function validation1(){
+            let a = document.getElementById("roll_no").value;
+            let b = document.getElementById("add").value;
+                if (a === ""|| b===""){
+                    alert("Enter the valid input")
+                    //document.getElementById("msg1").innerHTML = "There is entry problem"
+                }else {
+                    document.getElementById('msg1').innerHTML = "Submission Succesfull"
+                }
+            }
+        </script>
+    </div>
+    </div>
+    <div>
+        </div>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+</head>
+<body>
+    <h2>Contact Us</h2>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Enter your name" required><br><br>
+        <input type="email" name="email" placeholder="Enter your email" required><br><br>
+        <textarea name="message" placeholder="Enter your message" required></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html> -->

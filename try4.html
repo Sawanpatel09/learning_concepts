@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>THis is list of produncts</h1>
+    <h2> this is main list of products</h2>
+    <p id = "demo"></p>
+    <script>
+        let a = ["banana","orange","apple"]
+        let text = '<ul>'
+        for (let i = 0; i < a.length; i ++){
+            text =  text + "<li>" + a[i] + '</li>'
+        }
+        text = text + '</ul>'
+        document.getElementById("demo").innerHTML = text 
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "demo"></p>
+    <script>
+        let a = ["1",4,7]
+        document.getElementById("demo").innerHTML = typeof a[1]
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="demo"></p>
+    <script>
+        let Person = {
+            name : "sawan",
+            last_name : "patel",
+            clac : function myfunc(){
+                return 78
+            }
+        }
+    document.getElementById("demo").innerHTML = "this is my name " + Person.name + " and this is my last name " + Person.last_name + " this is my age " + Person.clac()
+    </script>
+</body>
+</html> -->
