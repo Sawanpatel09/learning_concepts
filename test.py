@@ -243,3 +243,41 @@ print(value1)'''
 #         count += 1
 #         break
 # print(count)
+
+
+
+
+# arr = [1,2,3,2,1]
+# stack = []
+# max1 = arr[0]
+# n = len(arr)
+# index = 0
+# for i in range(len(arr)):
+#     if max1 < arr[i]:
+#         max1 = arr[i]
+#         index = i
+# # right
+# check1 = max1
+# stack.append(max1)
+# for i in range(index + 1, n):
+#     if check1 > arr[i]:
+#         check1 = arr[i]
+#     elif check1 == arr[i]:
+#         pass
+#     else:
+#         diff = abs(check1 - arr[i])
+#         stack.append(diff)
+#         check1 = arr[i]
+# check1 = max1
+# for i in range(index - 1, -1, -1):
+#     if check1 > arr[i]:
+#         check1 = arr[i]
+#     elif check1 == arr[i]:
+#         pass
+#     else:
+#         print(check1,arr[i])
+#         diff = abs(check1 - arr[i])
+#         stack.append(diff)
+#         check1 = arr[i]
+# print(stack)
+
